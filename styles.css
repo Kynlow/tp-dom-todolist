@@ -1,0 +1,154 @@
+*:not(dialog) {
+	margin: 0px;
+	font-family: "Karla";
+}
+body {
+	background-color: #e0f1e8;
+	padding: 92px 128px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+.main1 {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+h1 {
+	color: #2a4144;
+	font-size: 72px;
+}
+.row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 70px;
+}
+button {
+	padding: 16px 40px;
+	height: max-content;
+	color: white;
+	border-radius: 8px;
+	border: 0px;
+	background-color: #0c7d69;
+}
+hr {
+	height: 4px;
+	border: none;
+	width: 60%;
+	align-self: center;
+	background-color: #2a4144;
+}
+dialog {
+	border: none;
+    width: 40%;
+    border-radius: 16px;
+}
+form {
+	padding: 40px;
+	border-radius: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	background-color: white;
+}
+h2 {
+	color: #2a4144;
+	font-size: 32px;
+	font-weight: 700;
+}
+.dialog-column {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+label {
+	color: #2a4144;
+	font-size: 16px;
+	font-weight: 400;
+}
+.label-span {
+	color: #0c7d69;
+}
+input {
+	border: 1px solid #86a2a5;
+	border-radius: 8px;
+	height: 50px;
+	color: #2a4144;
+	font-size: 18px;
+}
+#thetime {
+	display: flex;
+	gap: 20px;
+}
+#thetime > * {
+	width: 100%;
+	border: 1px solid #86a2a5;
+	border-radius: 8px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 0px 0px 0px 16px;
+}
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	width: 16px;
+	height: 16px;
+	padding: 2px 4px;
+	border-radius: 4px;
+}
+#checkbox1[type="checkbox"],
+#checkbox2[type="checkbox"] {
+	border-radius: 999px;
+}
+input[type="checkbox"]:checked {
+	content: url(check.svg);
+}
+.row-end {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+.list {
+	border-radius: 16px;
+	display: grid;
+    justify-items: center;
+    align-items: center;
+	grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+	gap: 40px;
+	background-color: white;
+	padding: 20px;
+}
+.list-input[type="checkbox"] {
+    width: 32px;
+    height: 32px;
+}
+.green {
+    background-color: #21B867;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 8px;
+}
+.red {
+    background-color: #D73C3C;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+h2 {
+    color: #2A4144;
+    font-weight: 700;
+    font-size: 32px;
+}
+.darkgreen {
+    background-color: #063F35;
+}
+p {
+    color: #2A4144;
+    font-weight: 400;
+    font-size: 18px;
+}

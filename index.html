@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tp-dom-todolist</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Chango&family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main>
+			<section class="main1">
+				<div class="row">
+					<h1>TODO List</h1>
+					<button id="submit-btn">Ajouter une tâche</button>
+				</div>
+				<hr />
+			</section>
+			<section class="main2"></section>
+			<dialog>
+				<form>
+					<h2>Ajouter une tâche</h2>
+					<div class="dialog-column">
+						<label for="thename"
+							>Nom <span class="label-span">*</span></label
+						>
+						<input type="text" name="name" id="thename" required />
+					</div>
+					<div class="dialog-column">
+						<label for="thetime"
+							>Durée <span class="label-span">*</span></label
+						>
+						<div id="thetime">
+							<div>
+								<input
+									type="checkbox"
+									id="checkbox1"
+									required
+								/>
+								<label for="checkbox1">Longue</label>
+							</div>
+							<div>
+								<input
+									type="checkbox"
+									id="checkbox2"
+									required
+								/>
+								<label for="checkbox2">Courte</label>
+							</div>
+						</div>
+					</div>
+					<div class="row-end">
+						<input type="checkbox" id="prio" required />
+						<label for="prio">Cette tâche est prioritaire</label>
+					</div>
+					<button>Ajouter une tâche</button>
+				</form>
+			</dialog>
+			<section class="list">
+				<input type="checkbox" class="list-input"/>
+                <div class="green">TODO</div>
+                <h2>Acheter des vbucks</h2>
+                <p>COurt</p>
+                <button class="darkgreen">Supprimer</button>
+			</section>
+		</main>
+	</body>
+</html>
