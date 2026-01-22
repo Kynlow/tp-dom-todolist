@@ -62,12 +62,21 @@
 				</form>
 			</dialog>
 			<section class="list">
-				<input type="checkbox" class="list-input"/>
-                <div class="green">TODO</div>
-                <h2>Acheter des vbucks</h2>
-                <p>COurt</p>
-                <button class="darkgreen">Supprimer</button>
+				<input type="checkbox" class="list-input" />
+				<div class="green">TODO</div>
+				<h2>Acheter des vbucks</h2>
+				<p>COurt</p>
+				<button class="darkgreen">Supprimer</button>
 			</section>
 		</main>
+		<script>
+			const $submitButton = document.querySelector("#submit-btn");
+			const $dialog = document.querySelector("dialog");
+            const $form = document.querySelector("form")
+			$submitButton.addEventListener("click", (e) => {
+				e.preventDefault();
+				$dialog.showModal();
+			});
+		</script>
 	</body>
 </html>
