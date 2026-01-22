@@ -38,16 +38,20 @@
 						<div id="thetime">
 							<div>
 								<input
-									type="checkbox"
+									type="radio"
 									id="checkbox1"
+									name="radios"
 									required
+									value="Longue"
 								/>
 								<label for="checkbox1">Longue</label>
 							</div>
 							<div>
 								<input
-									type="checkbox"
+									type="radio"
 									id="checkbox2"
+									name="radios"
+									value="Court"
 									required
 								/>
 								<label for="checkbox2">Courte</label>
@@ -55,7 +59,7 @@
 						</div>
 					</div>
 					<div class="row-end">
-						<input type="checkbox" id="prio" required />
+						<input type="checkbox" id="prio" />
 						<label for="prio">Cette tâche est prioritaire</label>
 					</div>
 					<button>Ajouter une tâche</button>
@@ -63,20 +67,12 @@
 			</dialog>
 			<section class="list">
 				<input type="checkbox" class="list-input" />
-				<div class="green">TODO</div>
+				<div class="red">TODO</div>
 				<h2>Acheter des vbucks</h2>
-				<p>COurt</p>
+				<p>Court</p>
 				<button class="darkgreen">Supprimer</button>
 			</section>
 		</main>
-		<script>
-			const $submitButton = document.querySelector("#submit-btn");
-			const $dialog = document.querySelector("dialog");
-            const $form = document.querySelector("form")
-			$submitButton.addEventListener("click", (e) => {
-				e.preventDefault();
-				$dialog.showModal();
-			});
-		</script>
+		<script src="app.js"></script>
 	</body>
 </html>

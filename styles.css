@@ -100,10 +100,6 @@ input[type="checkbox"] {
 	padding: 2px 4px;
 	border-radius: 4px;
 }
-#checkbox1[type="checkbox"],
-#checkbox2[type="checkbox"] {
-	border-radius: 999px;
-}
 input[type="checkbox"]:checked {
 	content: url(check.svg);
 }
@@ -134,6 +130,7 @@ input[type="checkbox"]:checked {
 	padding: 8px;
 }
 .red {
+	padding: 2px 4px;
 	background-color: #d73c3c;
 	color: white;
 	font-size: 32px;
