@@ -4,34 +4,51 @@ const $form = document.querySelector("form");
 const $main2 = document.querySelector(".main2");
 const prio = document.querySelector("#prio");
 const thename = document.querySelector("#thename");
+
 function createList() {
 	let data = new FormData($form);
 	let radios = data.get("radios");
 	let sectionList = document.createElement("section");
-	sectionList.classList.add("list");
-	$main2.prepend(sectionList);
 	let checkboxList = document.createElement("input");
-	checkboxList.setAttribute("type", "checkbox");
-	checkboxList.classList.add("list-input");
-	sectionList.appendChild(checkboxList);
 	let divList = document.createElement("div");
-	divList.classList.add("red");
-	sectionList.appendChild(divList);
-	divList.textContent = "TODO";
 	let $h2 = document.createElement("h2");
-	$h2.textContent = thename.value;
-	sectionList.appendChild($h2);
-	let $p = document.createElement("p");
-	if (radios == "Longue") {
-		$p.textContent = "Longue";
-	} else {
-		$p.textContent = "Courte";
-	}
-	sectionList.appendChild($p);
 	let btnList = document.createElement("button");
+	let $p = document.createElement("p");
+    let isOn = false
+	sectionList.classList.add("list");
+	checkboxList.classList.add("list-input");
+	divList.classList.add("red");
 	btnList.classList.add("darkgreen");
-	sectionList.appendChild(btnList);
+	checkboxList.setAttribute("type", "checkbox");
+	divList.textContent = "TODO";
+	$h2.textContent = thename.value;
 	btnList.textContent = "Supprimer";
+	$p.textContent = radios
+
+	sectionList.appendChild(checkboxList);
+	sectionList.appendChild(divList);
+	sectionList.appendChild($h2);
+	sectionList.appendChild($p);
+	sectionList.appendChild(btnList);
+
+	checkboxList.addEventListener("change", (event) => {
+		if (isOn == false) {
+			divList.classList.remove("red");
+			divList.classList.add("green");
+			divList.textContent = "DONE";
+            isOn = true
+		} else {
+			divList.classList.remove("green");
+			divList.classList.add("red");
+			divList.textContent = "TODO";
+            isOn = false
+		}
+	});
+    btnList.addEventListener("click", () => {
+        sectionList.remove()
+    })
+
+	return sectionList;
 }
 $submitButton.addEventListener("click", (e) => {
 	e.preventDefault();
@@ -39,6 +56,8 @@ $submitButton.addEventListener("click", (e) => {
 });
 $form.addEventListener("submit", (r) => {
 	r.preventDefault();
-    createList()
+	const $newElement = createList();
+	$main2.prepend($newElement);
+
 	$dialog.close();
 });
